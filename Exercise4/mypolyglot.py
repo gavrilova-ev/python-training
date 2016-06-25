@@ -9,11 +9,11 @@ def square(t, length):
 		fd(t, length)
 		lt(t)
 		
-square(bob, 25)
-square(bob, 50)
-square(bob, 100)
-square(bob, 150)
-square(bob, 200)
-square(bob, 250)
+def polygon(t, length, n):
+	for i in range(n):
+		fd(t, length)
+		lt(t, 360/n)
+		
+polygon(bob, 50, 6)
 	
 wait_for_user()
