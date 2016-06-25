@@ -4,14 +4,8 @@ world = TurtleWorld()
 bob = Turtle()
 print bob
 
-def do_n_times(f, func_param, n):
-	for i in range(n):
-		f(func_param)
-	
-def draw_and_turn(length):
-	fd(bob,length)
+for i in range(4):
+	fd(bob,100)
 	lt(bob)
-
-do_n_times(draw_and_turn, 100, 4)	
 	
 wait_for_user()
