@@ -13,7 +13,7 @@ def square(t, length):
 		
 def polygon(t, length, n):
 	angle = 360.0/n
-	polyline(t,length,n,angle)
+	polyline(t,n,length,angle)
 		
 def circle(t, r):
 	arc(t,r,360)
@@ -23,9 +23,12 @@ def arc(t, r, angle):
 	n = int(arc_length/3) +1
 	step_length = arc_length/n
 	step_angle = float(angle) / n
-	polyline(t,step_length,n,step_angle)
+	polyline(t,n,step_length,step_angle)
 		
-def polyline(t,length,n,angle):
+def polyline(t,n,length,angle):
+	"""Draws n line segments with the given length and 
+	angle (in degrees) between them. t is a turtle.
+	"""
 	for i in range(n):
 		fd(t,length)
 		lt(t,angle)
